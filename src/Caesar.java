@@ -145,7 +145,7 @@ public class Caesar {
         }
         String abecedari = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
         int lletra = abecedari.charAt(pos) - 'E';
-        if (lletra < 26) {
+        if (lletra <= 0) {
             lletra += 26;
         }
         StringBuilder s2 = new StringBuilder(decypher(s, lletra));
