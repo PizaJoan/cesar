@@ -49,8 +49,7 @@ public class Caesar {
         return sb.toString();
     }
 
-    static String magic(String s) {
-        String s2;
+    static int[] arrai(String s) {
         int ar[] = new int[26];
         for (int i = 0; i < s.length(); i++) {
             if (s.charAt(i) == 'A') {
@@ -132,6 +131,11 @@ public class Caesar {
                 ar[25]++;
             }
         }
+        return ar;
+    }
+    static String magic(String s) {
+        int[] ar = arrai(s);
+        String s2;
         int pos = 0;
         int major = 0;
         for (int i = 0; i < ar.length; i++) {
