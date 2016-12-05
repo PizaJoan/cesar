@@ -135,7 +135,6 @@ public class Caesar {
     }
     static String magic(String s) {
         int[] ar = arrai(s);
-        String s2;
         int pos = 0;
         int major = 0;
         for (int i = 0; i < ar.length; i++) {
@@ -149,8 +148,8 @@ public class Caesar {
         if (lletra < 26) {
             lletra += 26;
         }
-        s2 = decypher(s, lletra);
-        return s2;
+        StringBuilder s2 = new StringBuilder(decypher(s, lletra));
+        return s2.toString();
     }
 
 }
